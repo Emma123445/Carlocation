@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+}
+#entete{
+    height: 550px;
+    width: 100%;
+    background-size: cover;
+    background-image: url(img/black1.jpg),url(img/fleur1.jpg); 
+   /* background-clip: transparent;*/
+    background-position: center;
+    background-blend-mode: multiply;
+    text-align: center;
+}
+#entete header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#entete header ul:nth-child(1) {
+    list-style: none;
+    height: 50px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+#entete header ul:nth-child(1) li{
+    width: 254px;
+    color: white;
+    font-size: 18px;
+    font-family: Tahoma;
+}
+#entete header ul:nth-child(2) {
+    height: 50px;
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#entete header ul:nth-child(2) li{
+    width: 254px;
+    color: white;
+    font-size: 18px;
+    font-family: Tahoma;
+}
+#entete h2 {
+    text-align: center;
+    font-size: 55px;
+    font-family: Teco;
+    color: white;
+    
+}
+#entete button {
+    height: 50px;
+    width: 25vh;
+    background: red;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+#entete button:hover {
+    background-color: orangered;
+}
+
+#title {
+    height: 200px;
+    width: 100%;
+    text-align: center;
+}
+#title h1 {
+    font-size: 55px;
+    color: transparent;
+    background-image: url(img/black1.jpg),url(img/fleur1.jpg); 
+    background-clip: all;
+    background-size: contain;
+    -webkit-background-clip: text;
+    background-blend-mode: multiply;
+    letter-spacing: 25px;
+    font-family: tahoma;
+}
+#corps {
+    height: 420px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#corps #tache1,#tache2,#tache3 {
+    height: 355px;
+    width: 25%;
+    background-color: rgba(0, 5, 0, 5, 0, 5);
+    border: 0.2ch solid white;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#tache1 img{
+    height: 195px;
+    width: 100%;
+}
+#tache2 img{
+    height: 195px;
+    width: 100%;
+
+}
+#tache3 img{
+    height: 195px;
+    width: 100%;
+
+}
+#tache1:hover img {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+#tache2:hover img {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+#tache3:hover img {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+#tache1 #txt{
+    position: relative;
+}
+#tache2 #txt{
+    position: relative;
+}
+#tache3 #txt{
+    position: relative;
+}
+#tache3 #txt button{
+    height: 45px;
+    width: 35vh;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: tahoma;
+    background: -webkit-linear-gradient(9deg, black 45%,orangered 21%);
+}
+#tache1 #txt button{
+    height: 45px;
+    width: 35vh;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: tahoma;
+    background: -webkit-linear-gradient(9deg, black 45%,orangered 21%);
+}
+#tache2 #txt button{
+    height: 45px;
+    width: 35vh;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: tahoma;
+    background: -webkit-linear-gradient(9deg, black 45%,orangered 21%);
+}
+#slider {
+    width: 100%;
+    max-width: 500px; /* Slider largeur max */
+    overflow: hidden;
+    height: 300px;
+    margin: 150px auto;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: calc(500px * 5); /* Largeur totale (500px * nombre d'images) */
+    animation: slide-animation 15s infinite;
+}
+
+.slide {
+    width: 700px; /* Largeur de chaque image */
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animation pour faire défiler les images */
+@keyframes slide-animation {
+    0%, 15% { transform: translateX(0); } /* 1ère image */
+    25%, 35% { transform: translateX(-500px); } /* 2ème image */
+    45%, 55% { transform: translateX(-1000px); } /* 3ème image */
+    65%, 75% { transform: translateX(-1500px); } /* 3ème image */
+    80%, 95% { transform: translateX(-2000px); } /* 3ème image */
+    100% { transform: translateX(0); } /* Retour à la première */
+}
+
+
+
+footer {
+    padding: 0 15%;
+}
+footer .title {
+    margin-bottom: 20px;
+}
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact .class-form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+.contact h4 {
+    margin-bottom: 20px;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+.contact form input , textarea {
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #999;
+    resize: none;
+}
+.contact form button {
+    width: fit-content;
+    padding: 10px 25px;
+    background-color: #93d6d0;
+    border: 0;
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+}
+.address {
+    width: 50%;
+    height: 300px;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0,1);
+}
+.end {
+    margin-top: 50px;
+    background-color: #333;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+    color: #fff;
+}
